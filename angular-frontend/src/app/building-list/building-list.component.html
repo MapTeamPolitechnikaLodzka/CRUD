@@ -1,0 +1,27 @@
+<h2> Employee List</h2>
+<table class = "table table-striped">
+  <thead>
+  <tr>
+    <th> Short Name</th>
+    <th> Name </th>
+    <th> Simple Name</th>
+    <th> Aliases</th>
+    <th> Color</th>
+    <th> Actions </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let building of buildings" >
+    <td> {{ building.shortName }} </td>
+    <td> {{ building.buildingName }} </td>
+    <td> {{ building.simpleName }} </td>
+    <td> {{ building.buildingAliases }} </td>
+    <td> {{ building.buildingColor}} </td>
+    <td>
+      <button (click) = "updateBuilding(building.id)" class = "btn btn-info"> Update</button>
+      <button (click) = "deleteBuilding(building.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+      <button (click) = "buildingDetails(building.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

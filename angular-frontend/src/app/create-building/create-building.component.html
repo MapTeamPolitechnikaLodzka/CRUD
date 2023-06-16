@@ -1,0 +1,38 @@
+<div class="col-md-6 offset-md-3">
+  <h3> Create Building </h3>
+  <form (ngSubmit) = "onSubmit()">
+
+    <div class="form-group">
+      <label> Short Name </label>
+      <input type="text" class ="form-control" id = "shortName"
+             [(ngModel)] = "building.shortName" name = "shortName">
+    </div>
+
+    <div class="form-group">
+      <label> Name </label>
+      <input type="text" class ="form-control" id = "name"
+             [(ngModel)] = "building.buildingName" name = "lastName">
+    </div>
+
+    <div class="form-group">
+      <label> Simple Name </label>
+      <input type="text" class ="form-control" id = "simpleName"
+             [(ngModel)] = "building.simpleName" name = "simpleName">
+    </div>
+
+    <div class="form-group">
+      <label> Aliases </label>
+      <input type="text" class ="form-control" id = "aliases"
+             [(ngModel)] = "building.buildingAliases" name = "aliases">
+    </div>
+
+    <div class="form-group">
+      <label> Color </label>
+      <input type="text" class ="form-control" id = "color"
+             [(ngModel)] = "building.buildingColor" name = "color">
+    </div>
+
+    <button class = "btn btn-success" type ="submit">Submit</button>
+
+  </form>
+</div>
