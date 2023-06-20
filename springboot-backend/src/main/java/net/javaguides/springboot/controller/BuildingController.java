@@ -34,13 +34,13 @@ public class BuildingController {
         return buildingRepository.findAll();
     }
 
-    // create employee rest api
+    // create building rest api
     @PostMapping("/buildings")
     public Building createBuilding(@RequestBody Building building) {
         return buildingRepository.save(building);
     }
 
-    // get employee by id rest api
+    // get building by id rest api
     @GetMapping("/buildings/{id}")
     public ResponseEntity<Building> getBuildingById(@PathVariable Long id) {
         Building building = buildingRepository.findById(id)
@@ -48,24 +48,26 @@ public class BuildingController {
         return ResponseEntity.ok(building);
     }
 
-    // update employee rest api
+    // update building rest api
 
     @PutMapping("/buildings/{id}")
     public ResponseEntity<Building> updateBuilding(@PathVariable Long id, @RequestBody Building buildingDetails){
         Building building = buildingRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Building not exist with id :" + id));
 
-        building.setShortName(buildingDetails.getShortName());
         building.setName(buildingDetails.getName());
-        building.setSimpleName(buildingDetails.getSimpleName());
         building.setAliases(buildingDetails.getAliases());
-        building.setColor(buildingDetails.getColor());
+        building.setGeometry(buildingDetails.getGeometry());
+        building.setEntries(buildingDetails.getEntries());
+        building.setIcon(buildingDetails.getIcon());
+        building.setAddress(buildingDetails.getAddress());
+
 
         Building updatedBuilding = buildingRepository.save(building);
         return ResponseEntity.ok(updatedBuilding);
     }
 
-    // delete employee rest api
+    // delete building rest api
     @DeleteMapping("/buildings/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteBuilding(@PathVariable Long id){
         Building building = buildingRepository.findById(id)

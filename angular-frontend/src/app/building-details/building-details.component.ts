@@ -15,7 +15,7 @@ export class BuildingDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private buildingService: BuildingService) { }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params.id;
 
     this.building = new Building();
     this.buildingService.getBuildingById(this.id).subscribe( data => {

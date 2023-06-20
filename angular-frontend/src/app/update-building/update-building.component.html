@@ -3,33 +3,38 @@
   <form (ngSubmit) = "onSubmit()">
 
     <div class="form-group">
-      <label> Short Name </label>
-      <input type="text" class ="form-control" id = "shortName"
-             [(ngModel)] = "building.shortName" name = "shortName">
-    </div>
-
-    <div class="form-group">
       <label> Name </label>
       <input type="text" class ="form-control" id = "name"
-             [(ngModel)] = "building.buildingName" name = "name">
-    </div>
-
-    <div class="form-group">
-      <label> Simple Name </label>
-      <input type="text" class ="form-control" id = "simpleName"
-             [(ngModel)] = "building.simpleName" name = "simpleName">
+             [(ngModel)] = "building.name" name = "name">
     </div>
 
     <div class="form-group">
       <label> Aliases </label>
       <input type="text" class ="form-control" id = "aliases"
-             [(ngModel)] = "building.buildingAliases" name = "aliases">
+             [(ngModel)] = "building.aliases" name = "aliases">
     </div>
 
     <div class="form-group">
-      <label> Color </label>
-      <input type="text" class ="form-control" id = "color"
-             [(ngModel)] = "building.buildingColor" name = "color">
+      <label> Address </label>
+      <input type="text" class ="form-control" id = "address"
+             [(ngModel)] = "building.address" name = "address">
+    </div>
+    <div class="form-group">
+      <label> Geometry </label>
+      <input type="text" class ="form-control" id = "geometry"
+             [(ngModel)] = "building.geometry" name = "geometry">
+    </div>
+    <div class="form-group">
+      <label> Entries </label>
+      <input type="text" class ="form-control" id = "entries"
+             [(ngModel)] = "building.entries" name = "entries">
+    </div>
+
+
+    <div class="form-group">
+      <label> Icon </label>
+      <input type="text" class ="form-control" id = "icon"
+             [(ngModel)] = "building.icon" name = "icon">
     </div>
 
     <button class = "btn btn-success" type ="submit">Submit</button>

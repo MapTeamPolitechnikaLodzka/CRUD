@@ -1,22 +1,25 @@
-<h2> Employee List</h2>
+<h2> Building List</h2>
 <table class = "table table-striped">
   <thead>
   <tr>
-    <th> Short Name</th>
-    <th> Name </th>
-    <th> Simple Name</th>
-    <th> Aliases</th>
-    <th> Color</th>
-    <th> Actions </th>
+    <th> Name</th>
+    <th> Aliases </th>
+    <th> Address</th>
+    <th> Geometry</th>
+    <th> Entries</th>
+    <th> Icon</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor = "let building of buildings" >
-    <td> {{ building.shortName }} </td>
-    <td> {{ building.buildingName }} </td>
-    <td> {{ building.simpleName }} </td>
-    <td> {{ building.buildingAliases }} </td>
-    <td> {{ building.buildingColor}} </td>
+
+    <td> {{ building.name }} </td>
+    <td> {{ building.aliases }} </td>
+    <td>{{building.address}}</td>
+    <td> {{ building.geometry }} </td>
+    <td> {{ building.entries }} </td>
+    <td> {{ building.icon}} </td>
+
     <td>
       <button (click) = "updateBuilding(building.id)" class = "btn btn-info"> Update</button>
       <button (click) = "deleteBuilding(building.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>

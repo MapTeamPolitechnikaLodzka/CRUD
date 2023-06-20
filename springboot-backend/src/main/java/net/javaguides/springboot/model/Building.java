@@ -8,48 +8,41 @@ public class Building {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
 
-    @Column(name = "short_name")
-    private String shortName;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name = "simple_name")
-    private String simpleName;
+    @Column(name = "icon")
+    private String icon;
+
+    @Column(name = "address")
+    private String address;
+
+    @Column(name = "geometry")
+    private String geometry;
+
+    @Column(name = "entries")
+    private String entries;
+
     @Column(name = "aliases")
     private String aliases;
-    @Column(name = "color")
-    private String color;
 
     public Building() {
 
     }
 
-    public Building(String shortName, String name, String simpleName, String aliases, String color) {
-        this.shortName = shortName;
+    public Building( String name, String aliases, String address, String entries, String geometry, String icon) {
+        super();
         this.name = name;
-        this.simpleName = simpleName;
         this.aliases = aliases;
-        this.color = color;
+        this.entries = entries;
+        this.address = address;
+        this.geometry = geometry;
+        this.icon = icon;
     }
 
-    public long getId() {
-        return id;
-    }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getShortName() {
-        return shortName;
-    }
-
-    public void setShortName(String shortName) {
-        this.shortName = shortName;
-    }
 
     public String getName() {
         return name;
@@ -57,14 +50,6 @@ public class Building {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getSimpleName() {
-        return simpleName;
-    }
-
-    public void setSimpleName(String simpleName) {
-        this.simpleName = simpleName;
     }
 
     public String getAliases() {
@@ -75,11 +60,35 @@ public class Building {
         this.aliases = aliases;
     }
 
-    public String getColor() {
-        return color;
+
+    public String getAddress() {
+        return address;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setAddress(String address) {
+        this.address = address;
     }
+
+    public String getGeometry() {
+        return geometry;
+    }
+
+    public void setGeometry(String geometry) {
+        this.geometry = geometry;
+    }
+
+    public String getEntries() {
+        return entries;
+    }
+
+    public void setEntries(String entries) {
+        this.entries = entries;
+    }
+
+    public String getIcon() { return icon; }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
 }

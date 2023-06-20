@@ -8,7 +8,7 @@ import { Building } from './building';
 })
 export class BuildingService {
 
-  private baseURL = "http://localhost:8080/api/v1/buildings";
+  private baseURL = "http://localhost:8091/api/v1/buildings";
 
   constructor(private httpClient: HttpClient) { }
 

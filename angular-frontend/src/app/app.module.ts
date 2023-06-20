@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
@@ -11,7 +11,7 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { BuildingListComponent } from './building-list/building-list.component';
 import { CreateBuildingComponent } from './create-building/create-building.component';
 import { BuildingDetailsComponent } from './building-details/building-details.component';
-import { UpdateBuildingComponent } from './update-building/update-building.component'
+import { UpdateBuildingComponent } from './update-building/update-building.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,8 @@ import { UpdateBuildingComponent } from './update-building/update-building.compo
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
